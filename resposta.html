@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-tema="escuro">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Resposta · UmaBusca</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&display=swap">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script src="assets/js/app.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#conteudo">Pular para o conteúdo</a>
+  <header class="topo">
+    <p class="marca"><img src="assets/img/logo.svg" alt="Lupa, logotipo do UmaBusca" width="28" height="28"> UmaBusca</p>
+    <button type="button" class="btn-menu" aria-expanded="false" aria-controls="menu">Menu</button>
+    <nav id="menu" aria-label="Principal"><ul><li><a href="index.html">Buscar</a></li><li><a href="resposta.html" aria-current="page">Resposta</a></li><li><a href="fonte.html">Fonte</a></li><li><a href="sem-resultado.html">Sem resultado</a></li><li><a href="sobre.html">Sobre</a></li></ul></nav>
+    <button type="button" id="tema">Tema claro/escuro</button>
+  </header>
+  <div class="janela">
+  <p class="barra">○ ○ ○ <strong>IDE — projeto-pagamentos</strong></p>
+  <div class="ide">
+    <aside class="arvore" aria-label="Arquivos do projeto (ilustrativo)">
+      <ul><li>▸ src</li><li>▸ tests</li><li>▸ infra</li><li>README.md</li></ul>
+    </aside>
+    <main id="conteudo">
+      <p><a href="index.html">← Nova busca</a></p>
+      <h1>Busca: <span id="termo">deploy</span></h1>
+    <section aria-labelledby="t-resp" class="cartao">
+      <h2 id="t-resp">Procedimento de deploy na homologação <a class="selo" href="fonte.html">Atual · 2 dias</a></h2>
+      <p>Fonte: <a href="fonte.html">README do repositório · 2 dias</a></p>
+      <ol>
+        <li>Abrir o PR de release e aguardar o pipeline.</li>
+        <li>Rodar o job <code>deploy-hml</code> no CI.</li>
+        <li>Conferir o health check antes de avisar o time.</li>
+      </ol>
+      <!-- Componente com Bootstrap (equivalente em CSS puro comentado em assets/css/style.css) -->
+      <p><span class="badge rounded-pill border border-light text-bg-dark aviso-pill">Atenção</span> Não use a página antiga da wiki. Ela diverge deste procedimento.</p>
+    </section>
+    <section aria-labelledby="t-fontes">
+      <h2 id="t-fontes">Fontes (clique para conferir)</h2>
+      <div class="chips" role="group" aria-label="Filtrar fontes por ferramenta">
+        <button type="button" data-f="todas" aria-pressed="true">Todas</button>
+        <button type="button" data-f="Git" aria-pressed="false">Git</button>
+        <button type="button" data-f="Confluence" aria-pressed="false">Confluence</button>
+      </div>
+      <div class="campo">
+        <label for="ordem">Ordenar por</label>
+        <select id="ordem"><option value="recentes">Mais recentes</option><option value="antigas">Mais antigas</option></select>
+      </div>
+      <ul id="fontes" class="fontes"></ul>
+      <p id="contagem" class="dica" aria-live="polite"></p>
+    </section>
+    <div class="acoes">
+      <a class="btn btn-p" href="index.html">Buscar de novo</a>
+    </div>
+    <details>
+      <summary>Enviar feedback sobre a resposta</summary>
+      <form data-ok="ok-fb">
+        <div class="campo">
+          <label for="fb">O que não ajudou nesta resposta?</label>
+          <textarea id="fb" name="fb" rows="3" required minlength="5" data-msg="texto"></textarea>
+        </div>
+        <button type="submit" class="btn">Enviar feedback</button>
+      </form>
+      <p id="ok-fb" class="ok" role="status" tabindex="-1" hidden>Feedback enviado. Obrigado!</p>
+    </details>
+    </main>
+  </div>
+  </div>
+  <footer><p>UmaBusca · Desenvolvimento de Interfaces · ADS/CEUB</p></footer>
+</body>
+</html>

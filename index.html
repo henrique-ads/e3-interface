@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-tema="escuro">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Buscar · UmaBusca</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&display=swap">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script src="assets/js/app.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#conteudo">Pular para o conteúdo</a>
+  <header class="topo">
+    <p class="marca"><img src="assets/img/logo.svg" alt="Lupa, logotipo do UmaBusca" width="28" height="28"> UmaBusca</p>
+    <button type="button" class="btn-menu" aria-expanded="false" aria-controls="menu">Menu</button>
+    <nav id="menu" aria-label="Principal"><ul><li><a href="index.html" aria-current="page">Buscar</a></li><li><a href="resposta.html">Resposta</a></li><li><a href="fonte.html">Fonte</a></li><li><a href="sem-resultado.html">Sem resultado</a></li><li><a href="sobre.html">Sobre</a></li></ul></nav>
+    <button type="button" id="tema">Tema claro/escuro</button>
+  </header>
+  <div class="janela">
+  <p class="barra">○ ○ ○ <strong>IDE — projeto-pagamentos</strong></p>
+  <div class="ide">
+    <aside class="arvore" aria-label="Arquivos do projeto (ilustrativo)">
+      <ul><li>▸ src</li><li>▸ tests</li><li>▸ infra</li><li>README.md</li></ul>
+    </aside>
+    <main id="conteudo">
+    <div class="editor" aria-hidden="true">[ editor de código (fora do protótipo) ]</div>
+      <h1>Buscar em Git, tarefas, wiki e chat</h1>
+    <form id="busca">
+      <div class="campo">
+        <label for="q" class="so-leitor">Digite o que você precisa encontrar</label>
+        <input type="search" id="q" name="q" required minlength="2" autocomplete="off" data-msg="q" placeholder="Digite o que você precisa encontrar">
+      </div>
+      <button type="submit" class="btn btn-p">Buscar</button>
+      <p class="dica">Uma busca só: Git · Jira · Confluence · chat da equipe</p>
+    </form>
+    </main>
+  </div>
+  </div>
+  <footer><p>UmaBusca · Desenvolvimento de Interfaces · ADS/CEUB</p></footer>
+</body>
+</html>

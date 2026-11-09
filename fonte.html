@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-tema="escuro">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Fonte · UmaBusca</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&display=swap">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script src="assets/js/app.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#conteudo">Pular para o conteúdo</a>
+  <header class="topo">
+    <p class="marca"><img src="assets/img/logo.svg" alt="Lupa, logotipo do UmaBusca" width="28" height="28"> UmaBusca</p>
+    <button type="button" class="btn-menu" aria-expanded="false" aria-controls="menu">Menu</button>
+    <nav id="menu" aria-label="Principal"><ul><li><a href="index.html">Buscar</a></li><li><a href="resposta.html">Resposta</a></li><li><a href="fonte.html" aria-current="page">Fonte</a></li><li><a href="sem-resultado.html">Sem resultado</a></li><li><a href="sobre.html">Sobre</a></li></ul></nav>
+    <button type="button" id="tema">Tema claro/escuro</button>
+  </header>
+  <div class="janela">
+  <p class="barra">○ ○ ○ <strong>IDE — projeto-pagamentos</strong></p>
+  <div class="ide">
+    <aside class="arvore" aria-label="Arquivos do projeto (ilustrativo)">
+      <ul><li>▸ src</li><li>▸ tests</li><li>▸ infra</li><li>README.md</li></ul>
+    </aside>
+    <main id="conteudo">
+      <h1>README do repositório <span class="selo">Atualizado há 2 dias</span></h1>
+    <p><a href="resposta.html">‹ Voltar à resposta</a></p>
+    <p class="meta">Última edição: 03/11/2026 às 14:32, por Carlos Mendes (dados de exemplo).</p>
+    <blockquote class="cartao">
+      <p>…o ambiente de homologação é publicado pelo CI. Para publicar, abra o PR de release e rode o job <code>deploy-hml</code>.</p>
+      <pre><span aria-hidden="true">$ </span><code id="cmd">gh workflow run deploy-hml</code></pre>
+      <p>…não execute scripts manuais no servidor.</p>
+    </blockquote>
+    <div class="acoes">
+      <button type="button" id="copiar" class="btn">Copiar comando</button>
+      <a class="btn btn-p" href="resposta.html">Entendi, voltar</a>
+      <button type="button" disabled title="Indisponível na demonstração">Abrir no original</button>
+    </div>
+    </main>
+  </div>
+  </div>
+  <footer><p>UmaBusca · Desenvolvimento de Interfaces · ADS/CEUB</p></footer>
+</body>
+</html>

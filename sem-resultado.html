@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-tema="escuro">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sem resultado · UmaBusca</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&display=swap">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script src="assets/js/app.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#conteudo">Pular para o conteúdo</a>
+  <header class="topo">
+    <p class="marca"><img src="assets/img/logo.svg" alt="Lupa, logotipo do UmaBusca" width="28" height="28"> UmaBusca</p>
+    <button type="button" class="btn-menu" aria-expanded="false" aria-controls="menu">Menu</button>
+    <nav id="menu" aria-label="Principal"><ul><li><a href="index.html">Buscar</a></li><li><a href="resposta.html">Resposta</a></li><li><a href="fonte.html">Fonte</a></li><li><a href="sem-resultado.html" aria-current="page">Sem resultado</a></li><li><a href="sobre.html">Sobre</a></li></ul></nav>
+    <button type="button" id="tema">Tema claro/escuro</button>
+  </header>
+  <div class="janela">
+  <p class="barra">○ ○ ○ <strong>IDE — projeto-pagamentos</strong></p>
+  <div class="ide">
+    <aside class="arvore" aria-label="Arquivos do projeto (ilustrativo)">
+      <ul><li>▸ src</li><li>▸ tests</li><li>▸ infra</li><li>README.md</li></ul>
+    </aside>
+    <main id="conteudo">
+      <p><a href="index.html">← Nova busca</a></p>
+      <h1>Nada encontrado nas fontes que você acessa</h1>
+    <img src="assets/img/vazio.svg" alt="" width="120" height="80">
+    <p>Não achei uma resposta confiável, então não vou arriscar uma. Tente outras palavras (ex.: deploy, homologação) ou busque só no projeto. Pode estar fora do seu acesso: alguns documentos de outros projetos exigem permissão.</p>
+    <div class="duas">
+      <div>
+        <a class="btn btn-p" href="index.html">Tentar outros termos</a>
+        <p class="dica">Use quando o termo pode estar escrito de outra forma.</p>
+      </div>
+      <div>
+        <button type="button" id="pedir" class="btn" aria-expanded="false" aria-controls="form-acesso">Pedir acesso</button>
+        <p class="dica">Use quando o documento é de outro projeto ou cliente.</p>
+      </div>
+    </div>
+    <form id="form-acesso" data-ok="ok-acesso" hidden>
+      <h2>Pedir acesso ao responsável</h2>
+      <div class="linha">
+        <div class="campo">
+          <label for="proj">Projeto</label>
+          <select id="proj" name="proj" required>
+            <option value="">Escolha um projeto</option>
+            <option>projeto-pagamentos</option>
+            <option>projeto-clientes</option>
+          </select>
+        </div>
+        <div class="campo">
+          <label for="email">E-mail corporativo</label>
+          <input type="email" id="email" name="email" required data-msg="email" autocomplete="email">
+        </div>
+      </div>
+      <div class="campo">
+        <label for="motivo">Por que você precisa deste acesso?</label>
+        <textarea id="motivo" name="motivo" rows="3" required minlength="10" data-msg="motivo"></textarea>
+      </div>
+      <button type="submit" class="btn btn-p">Enviar pedido</button>
+    </form>
+    <p id="ok-acesso" class="ok" role="status" tabindex="-1" hidden>Pedido enviado ao responsável do projeto.</p>
+    </main>
+  </div>
+  </div>
+  <footer><p>UmaBusca · Desenvolvimento de Interfaces · ADS/CEUB</p></footer>
+</body>
+</html>
