@@ -15,4 +15,7 @@
 | Navegação real no topo, no lugar do botão "Facilitador" | No site, quem visita precisa navegar sem o facilitador |
 | O selo "Atenção" usa o badge do Bootstrap | A E3 pede um componente com framework; o protótipo já usava um selo arredondado |
 | Árvore de arquivos escondida abaixo de 768 px | Falta largura no celular |
+<<<<<<< HEAD
 | «Acrescentar aqui qualquer diferença visual encontrada ao comparar lado a lado com o protótipo» | O navegador impõe coisas que o Figma não impõe |
+=======
+>>>>>>> fe3d219d0f76a4bb566e2b0eec671cab4940c8f8
