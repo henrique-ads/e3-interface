@@ -1,0 +1,101 @@
+From 87fcc9a1e9fc5bfbedf825f6b8282bb125cdd876 Mon Sep 17 00:00:00 2001
+From: =?UTF-8?q?Kau=C3=AA=20Rodrigues=20de=20Oliveira=20Rocha?=
+ <kaue.oliveira@sempreceub.com>
+Date: Tue, 10 Nov 2026 11:35:49 +0000
+Subject: [PATCH 2/2] Adiciona README e lista de mudancas
+
+Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>
+Claude-Session: https://claude.ai/code/session_01EUCJJ5TRQNNEBkqb5M4gc7
+---
+ MUDANCAS.md | 17 +++++++++++++++++
+ README.md   | 54 +++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 2 files changed, 71 insertions(+)
+ create mode 100644 MUDANCAS.md
+ create mode 100644 README.md
+
+diff --git a/MUDANCAS.md b/MUDANCAS.md
+new file mode 100644
+index 0000000..0b749fd
+--- /dev/null
++++ b/MUDANCAS.md
+@@ -0,0 +1,17 @@
++# O que mudou em relação ao protótipo da E2
++
++| O que mudou | Por quê |
++| --- | --- |
++| A fonte aparece logo abaixo do título da resposta, e o selo "Atual · 2 dias" abre a fonte | No teste, P3 confiou só no selo e não viu as fontes no rodapé |
++| "Isso não responde minha dúvida" virou dois controles: "Buscar de novo" e "Enviar feedback sobre a resposta" | P3 não sabia se reiniciava a busca ou enviava feedback |
++| Tela 4 tem dois botões lado a lado, com uma frase sobre quando usar cada um | P2 hesitou entre pedir acesso e trocar os termos |
++| O editor está rotulado "editor de código (fora do protótipo)", com cursor padrão e aparência inativa | P2 clicou no editor achando que era interativo |
++| A tela 3 mostra data, hora e autor da última edição | P2 queria confirmar que o README não mudou "ontem" |
++| O aviso ficou "não use a página antiga da wiki" | P1 reagiu bem ao aviso; o texto ficou mais direto |
++| "Abrir no original" está desativado | Não existe repositório real por trás da demonstração |
++| Nome "UmaBusca", tema claro/escuro e menu recolhível no celular | O protótipo não tinha nome; o navegador exige adaptar a barra e a árvore de arquivos em telas pequenas |
++| Quinta página "Sobre" (problema, princípio e grupo) | A E3 pede de 3 a 5 páginas; esta apresenta o contexto da E1 |
++| Filtro e ordenação de fontes | Pedido da E3: interatividade com manipulação do DOM |
++| Navegação real no topo, no lugar do botão "Facilitador" | No site, quem visita precisa navegar sem o facilitador |
++| O selo "Atenção" usa o badge do Bootstrap | A E3 pede um componente com framework; o protótipo já usava um selo arredondado |
++| Árvore de arquivos escondida abaixo de 768 px | Falta largura no celular |
+diff --git a/README.md b/README.md
+new file mode 100644
+index 0000000..555b80d
+--- /dev/null
++++ b/README.md
+@@ -0,0 +1,54 @@
++# UmaBusca
++
++Sistema inteligente para profissionais de tecnologia encontrarem, em uma única busca e com a fonte à vista, a informação atual de que precisam para executar uma tarefa. Versão final (E3) do protótipo da E2, de Desenvolvimento de Interfaces (ADS/CEUB).
++
++**Para quem:** desenvolvedoras e desenvolvedores como a persona Marina, que hoje procuram em 4 ou mais ferramentas (Git, tarefas, wiki, chat) e já tiveram erro por usar documentação desatualizada.
++
++**Repositório:** https://github.com/henrique-ads/e3-interface · **Site publicado:** https://henrique-ads.github.io/e3-interface/
++
++**Protótipo da E2:** https://henrique-ads.github.io/prototipo-E2/
++
++## Como rodar
++
++Abra `index.html` no navegador. Se preferir um servidor local: `python -m http.server 8000` e acesse http://localhost:8000.
++Para testar: busque `deploy` (vai à resposta) e qualquer outro termo (vai à tela sem resultado).
++
++## O que cada arquivo faz
++
++| Arquivo | Função |
++| --- | --- |
++| `index.html` | Tela 1: busca |
++| `resposta.html` | Tela 2: resposta com fonte e selo de atualidade, filtro de fontes e feedback |
++| `sobre.html` | Quinta página: problema, princípio e grupo |
++| `fonte.html` | Tela 3: fonte aberta |
++| `sem-resultado.html` | Tela 4: sem resultado ou sem acesso, com pedido de acesso |
++| `assets/css/style.css` | Estilos (Flexbox e Grid, tema claro/escuro, 360/768/1280 px) |
++| `assets/js/app.js` | Interatividade: tema, menu, validação com mensagem própria, filtro e ordenação de fontes, copiar comando, pedido de acesso |
++| `assets/img/` | Logotipo e ilustração |
++| `MUDANCAS.md` | O que mudou em relação ao protótipo e por quê |
++
++## Créditos
++
++- Henrique Bernardes Machado e Kauê Rodrigues de Oliveira Rocha (grupo).
++- Bootstrap 5.3 (https://getbootstrap.com), usado em um componente (o aviso da tela de resposta).
++- Apoio de IA (Claude, da Anthropic) na geração inicial do código; o grupo revisou e adaptou.
++
++## Divisão do trabalho
++
++- **Henrique Bernardes Machado:** páginas HTML, CSS e imagens.
++- **Kauê Rodrigues de Oliveira Rocha:** interatividade em JavaScript, README e MUDANCAS.
++
++## Exigências da E3 e onde estão
++
++| Exigência | Onde |
++| --- | --- |
++| 3 a 5 páginas navegáveis | 5 páginas ligadas pelo menu do topo |
++| HTML semântico, títulos em ordem | `header`, `nav`, `main`, `section`, `footer`; um `h1` por página |
++| Formulário com `label`, `type` e validação nativa | Busca (`index.html`), pedido de acesso (`sem-resultado.html`) e feedback (`resposta.html`) |
++| CSS externo, sem `style=` | `assets/css/style.css` |
++| Responsivo (360, 768 e 1280 px) | Grid e Flexbox; o menu vira botão abaixo de 768 px |
++| Teclado, foco visível | Link "Pular para o conteúdo" e `:focus-visible` |
++| Imagens com `alt` | Logotipo com texto; ilustração decorativa com `alt=""` |
++| 3 interações em JS e manipulação do DOM | Tema, menu, validação própria, filtro e ordenação das fontes, copiar comando, pedido de acesso |
++| Componente com framework CSS | Selo "Atenção" com o badge do Bootstrap; CSS puro equivalente comentado em `style.css` |
++| `MUDANCAS.md` | O que divergiu do protótipo e por quê |
+-- 
+2.43.0
+
